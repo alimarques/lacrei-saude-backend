@@ -1,25 +1,31 @@
 # Lacrei Saúde Backend
 
-Esta API tem como objetivo 
+Esta API tem como objetivo possibilitar a criação, edição e exclusão de profissionais e consultas. Foi utilizado o Django Rest Framework.
 
 ## Configurando ambiente
-Criar e ativar `venv`:
+
+Comece fazendo o clone deste repositório:
+```bash
+git clone https://github.com/alimarques/lacrei-saude-backend.git
+```
+
+Para que não haja conflito de pacotes, crie e ative uma `venv`:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-Instalar libs:
+Instale os pacotes python que são necessários:
 ```bash
 pip install -r requirements.txt
 ```
 
-Migrar modelos:
+Em seguida migre os modelos:
 ```bash
 python manage.py migrate
 ```
 
-Para rodar a aplicação localmente:
+Por fim, rode a aplicação localmente:
 ```bash
 python manage.py runserver
 ```
@@ -109,6 +115,11 @@ Alguns testes unitários foram feitos:
 - Assegurar comportamento de GET e POST das views;
 - Assegurar campos dos modelos;
 - Assegurar consistência de chaves estrangeiras.
+
+Para rodar os testes:
+```bash
+python manage.py test
+```
 
 ## TO DO
 
